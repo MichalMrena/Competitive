@@ -1,7 +1,7 @@
 # UVA 100 The 3n + 1 problem
 [problem description](https://uva.onlinejudge.org/external/1/p100.pdf)
 
-I am starting with Haskell so here is lets say some solution:
+I am starting with Haskell so here is code:
 ```
 maxSequenceLenght i j = maximum (map sequenceLenght (if i < j then [i..j] else [j..i]))
     where sequenceLenght 1 = 1          
