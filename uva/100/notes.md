@@ -3,17 +3,7 @@
 
 I am starting with Haskell so here is lets say some solution:
 ```
-maxSequenceLenght :: Int -> Int -> Int
-maxSequenceLenght i j = maximum (sequenceLenghts (allIntsBetween i j))
-    where allIntsBetween i j
-              | i < j     = [i..j]
-              | otherwise = [j..i]
-
-          nextN n 
-              | even n    = div n 2
-              | otherwise = 3 * n + 1
-          sequenceForN 1 = [1]
-          sequenceForN n = n:sequenceForN (nextN n)
-
-          sequenceLenghts ns = [length (sequenceForN n) | n <- ns]	
+maxSequenceLenght i j = maximum (map sequenceLenght (if i < j then [i..j] else [j..i]))
+    where sequenceLenght 1 = 1          
+          sequenceLenght n = 1 + sequenceLenght (if even n then div n 2 else 3 * n + 1)	
 ```
