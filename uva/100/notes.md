@@ -3,7 +3,7 @@
 
 This sequence is called [Collatz conjecture](https://en.wikipedia.org/wiki/Collatz_conjecture). Its quite interesting.
 
-I am starting with Haskell so here is code:
+I am starting with Haskell so here is some code:
 ```
 maxSequenceLenght i j = maximum (map sequenceLenght integersBetween)
     where
