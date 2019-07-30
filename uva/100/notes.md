@@ -1,6 +1,8 @@
 # UVA 100 The 3n + 1 problem
 [problem description](https://uva.onlinejudge.org/external/1/p100.pdf)
 
+This sequence is called [Collatz conjecture](https://en.wikipedia.org/wiki/Collatz_conjecture). Its quite interesting.
+
 I am starting with Haskell so here is code:
 ```
 maxSequenceLenght i j = maximum (map sequenceLenght integersBetween)
