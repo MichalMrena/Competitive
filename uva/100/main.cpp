@@ -28,7 +28,7 @@ public:
 
 std::map<uint, uint> memo;
 
-uint cycleLength(uint n)
+uint sequenceLength(uint n)
 {
     if (1 == n)
         return 1;
@@ -37,7 +37,7 @@ uint cycleLength(uint n)
         return memo.at(n);
 
     uint nextN( 1 & n ? 3 * n + 1 : n >> 1 );
-    uint nextNLen( cycleLength(nextN) );
+    uint nextNLen( sequenceLength(nextN) );
 
     memo[nextN] = nextNLen;
 
@@ -63,7 +63,7 @@ int main()
         only_max<uint> maxLen;
         for (uint k(i); k <= j; ++k)
         {
-            maxLen.maybe_set(cycleLength(k));
+            maxLen.maybe_set(sequenceLength(k));
         }
         std::cout << maxLen.get() << '\n';
     }
