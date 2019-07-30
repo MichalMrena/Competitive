@@ -3,7 +3,9 @@
 
 I am starting with Haskell so here is code:
 ```
-maxSequenceLenght i j = maximum (map sequenceLenght (if i < j then [i..j] else [j..i]))
-    where sequenceLenght 1 = 1          
-          sequenceLenght n = 1 + sequenceLenght (if even n then div n 2 else 3 * n + 1)	
+maxSequenceLenght i j = maximum (map sequenceLenght integersBetween)
+    where
+      integersBetween  = if i < j then [i..j] else [j..i]
+      sequenceLenght 1 = 1          
+      sequenceLenght n = 1 + sequenceLenght (if even n then div n 2 else 3 * n + 1)
 ```
