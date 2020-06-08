@@ -29,6 +29,7 @@ public class Main {
         }
     }
 
+    // https://uva.onlinejudge.org/external/1/113.pdf
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
